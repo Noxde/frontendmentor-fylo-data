@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  /** Primary **/
+  --clr-neutral-Pale-Blue: hsl(243, 100%, 93%);
+  --clr-neutral-Grayish-Blue: hsl(229, 7%, 55%);
+  --clr-neutral-Dark-Blue: hsl(228, 56%, 26%);
+  --clr-neutral-Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral-Very-Dark-Blue);
+  background-image: url(../images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-btns {
+  background-color: var(--clr-neutral-Dark-Blue);
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  background-color: var(--clr-neutral-Very-Dark-Blue);
+  padding-right: 1rem;
+}
+
+/** Range Input **/
+
+input[type="range"] {
+  width: 100%;
+  margin: -2px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--clr-neutral-Dark-Blue);
+  border: 0;
+  border-radius: 24.5px;
+  padding: 0.15rem;
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: 2px;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+progress {
+  -webkit-appearance: none;
+}
+input[type="range"]::-webkit-progress-bar {
+  background-color: red;
+}
+input[type="range"]::-moz-range-track {
+  background-color: var(--clr-neutral-Dark-Blue);
+  border: 0;
+  padding: 0.15rem 0.17rem;
+  border-radius: 24.5px;
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-progress {
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 70%;
+  border-radius: 24.5px;
+}
+
+/** Range Input End **/
