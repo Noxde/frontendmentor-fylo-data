@@ -33,17 +33,41 @@ main {
 
 .logo-btns {
   background-color: var(--clr-neutral-Dark-Blue);
+  padding: 2rem 7rem 2rem 2rem;
+  margin-right: 2rem;
+  border-radius: 10px;
+  border-top-right-radius: 90px;
+}
+
+.logo {
+  margin-bottom: 2rem;
 }
 
 .btns {
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--clr-neutral-Very-Dark-Blue);
-  padding-right: 1rem;
+  margin-right: 1rem;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.gb-info {
+  background-color: var(--clr-neutral-Dark-Blue);
+  padding: 2rem 2em;
+  border-radius: 10px;
+  color: white;
+}
+
+.gb-used {
+  font-weight: 700;
 }
 
 /** Range Input **/
