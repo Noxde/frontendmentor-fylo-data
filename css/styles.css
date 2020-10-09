@@ -82,7 +82,7 @@ input[type="range"]:focus {
   outline: none;
 }
 input[type="range"]::-webkit-slider-runnable-track {
-  background: var(--clr-neutral-Dark-Blue);
+  background: var(--clr-neutral-Very-Dark-Blue);
   border: 0;
   border-radius: 24.5px;
   padding: 0.15rem;
@@ -107,7 +107,7 @@ input[type="range"]::-webkit-progress-bar {
   background-color: red;
 }
 input[type="range"]::-moz-range-track {
-  background-color: var(--clr-neutral-Dark-Blue);
+  background-color: var(--clr-neutral-Very-Dark-Blue);
   border: 0;
   padding: 0.15rem 0.17rem;
   border-radius: 24.5px;
