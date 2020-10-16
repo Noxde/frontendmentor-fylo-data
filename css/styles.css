@@ -2,10 +2,10 @@
 
 :root {
   /** Primary **/
-  --clr-neutral-Pale-Blue: hsl(243, 100%, 93%);
-  --clr-neutral-Grayish-Blue: hsl(229, 7%, 55%);
-  --clr-neutral-Dark-Blue: hsl(228, 56%, 26%);
-  --clr-neutral-Very-Dark-Blue: hsl(229, 57%, 11%);
+  --clr-neutral-Pale-Blue: #dddbff;
+  --clr-neutral-Grayish-Blue: #848794;
+  --clr-neutral-Dark-Blue: #1d2c67;
+  --clr-neutral-Very-Dark-Blue: #0c122c;
 }
 
 * {
@@ -74,6 +74,7 @@ main {
 }
 
 .gb-info {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,6 +84,31 @@ main {
   border-radius: 10px;
   color: var(--clr-neutral-Pale-Blue);
   width: 40%;
+}
+
+.gb-left {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: -30%;
+  right: 7%;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: white;
+  color: var(--clr-neutral-Grayish-Blue);
+}
+
+.gb-left__gbleft-text {
+  letter-spacing: 1px;
+  font-size: 0.8em;
+}
+
+.gb-left__number {
+  color: var(--clr-neutral-Very-Dark-Blue);
+  font-size: 2.5em;
+  margin-right: 0.2em;
 }
 
 .text-wrapper {
@@ -103,7 +129,7 @@ main {
   width: 100%;
   border-radius: 10px;
   margin: 1rem 0 0.5rem 0;
-  padding: 0.2rem;
+  padding: 3px;
 }
 
 .gb-meter__used {
@@ -112,7 +138,7 @@ main {
   justify-content: flex-end;
   width: 70%;
   height: 100%;
-  padding: 2px 2px;
+  padding: 3px;
   border-radius: 10px;
   background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
@@ -130,4 +156,41 @@ main {
   color: var(--clr-neutral-Pale-Blue);
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url(../images/bg-mobile.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .logo-btns {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  .gb-info {
+    width: 100%;
+  }
+
+  .text-wrapper {
+    text-align: center;
+  }
+
+  .gb-left {
+    top: unset;
+    bottom: -30%;
+    right: unset;
+  }
+
+  .gb-label {
+    margin-bottom: 1rem;
+  }
 }
