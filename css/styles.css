@@ -64,14 +64,21 @@ main {
   align-items: center;
   background-color: var(--clr-neutral-Very-Dark-Blue);
   margin-right: 1rem;
+  border: none;
   border-radius: 10px;
   width: 50px;
   height: 50px;
-  padding: 10px;
+  transition: all 0.15s;
 }
 
 .btn:hover {
   cursor: pointer;
+}
+
+.btn:focus {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.658);
+  transform: scale(1.05);
+  outline: none;
 }
 
 .gb-info {
@@ -88,6 +95,7 @@ main {
 }
 
 .gb-left {
+  position: relative;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -95,8 +103,9 @@ main {
   position: absolute;
   top: -30%;
   right: 7%;
-  padding: 1em;
+  padding: 0.7em 1em;
   border-radius: 10px;
+  border-bottom-right-radius: 0;
   background-color: white;
   color: var(--clr-neutral-Grayish-Blue);
 }
@@ -112,9 +121,21 @@ main {
   margin-right: 0.2em;
 }
 
+.gb-left::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  right: 0;
+  margin-left: -5px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: white white transparent transparent;
+}
+
 .text-wrapper {
   text-align: left;
   width: 100%;
+  margin-top: 0.5rem;
 }
 
 .gb-used {
@@ -125,13 +146,12 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--clr-neutral-Very-Dark-Blue);
+  background-color: rgb(21, 30, 73);
   height: 22px;
   width: 100%;
   border-radius: 10px;
   margin: 1rem 0 0.5rem 0;
   padding: 3px;
-  opacity: 0.8;
 }
 
 .gb-meter__used {
@@ -184,15 +204,11 @@ main {
     width: min-content;
   }
 
-  .btn {
-    transition: all 20ms ease;
-  }
-
-  .btn:active {
+  /* .btn:active {
     transform: scale(1.1);
     box-shadow: 0px 0px 25px -6px rgba(0, 0, 0, 0.63);
     transition: all 20ms ease;
-  }
+  } */
 
   .gb-info {
     width: 100%;
@@ -206,6 +222,11 @@ main {
     top: unset;
     bottom: -30%;
     right: unset;
+    border-bottom-right-radius: 10px;
+  }
+
+  .gb-left::after {
+    display: none;
   }
 
   .gb-label {
