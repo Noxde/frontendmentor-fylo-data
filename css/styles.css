@@ -22,8 +22,8 @@ body {
   background-color: var(--clr-neutral-Very-Dark-Blue);
   background-image: url(../images/bg-desktop.png);
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-position-y: bottom -50px;
+  background-size: contain;
+  background-position: 0% 110%;
 }
 
 .content {
